@@ -1,0 +1,95 @@
+{
+  "name": "covalent-quickstart",
+  "version": "0.9.1",
+  "private": true,
+  "description": "Quickstart App with @covalent packages",
+  "keywords": [
+    "angular",
+    "components",
+    "reusable"
+  ],
+  "scripts": {
+    "e2e": "protractor",
+    "e2e-test": "protractor ./protractor.conf.js",
+    "tslint": "tslint -c ./tslint.json \"./src/**/*.ts\" -e \"./src/**/typings.d.ts\" -e \"./src/environments/**\"",
+    "postinstall": "webdriver-manager update",
+    "start-api": "cd mock-api && covalent-data &",
+    "stop-api": "pkill covalent-data",
+    "webdriver-update": "bash ./node_modules/.bin/webdriver-manager update",
+    "pretest": "rm -rf ./dist && ng build",
+    "test": "npm run karma",
+    "karma": "karma start ./karma.conf.js --single-run",
+    "ghpages-deploy": "bash scripts/ghpages-deploy"
+  },
+  "engines": {
+    "node": ">4.4 < 7",
+    "npm": ">3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teradata/covalent-quickstart.git"
+  },
+  "license": "MIT",
+  "author": "Teradata UX",
+  "contributors": [
+    "Kyle Ledbetter <kyle.ledbetter@teradata.com>",
+    "Richa Vyas <richa.vyas@teradata.com>",
+    "Ed Morales <eduardo.morales@teradata.com>",
+    "Jason Weaver <jason.weaver@teradata.com>",
+    "Jeremy Wilken <jeremy.wilken@teradata.com>"
+  ],
+  "dependencies": {
+    "@angular/common": "2.4.4",
+    "@angular/compiler": "2.4.4",
+    "@angular/core": "2.4.4",
+    "@angular/forms": "2.4.4",
+    "@angular/http": "2.4.4",
+    "@angular/material": "2.0.0-beta.1",
+    "@angular/platform-browser": "2.4.4",
+    "@angular/platform-browser-dynamic": "2.4.4",
+    "@angular/platform-server": "2.4.4",
+    "@angular/router": "3.4.4",
+    "@covalent/charts": "0.10.2",
+    "@covalent/chips": "0.9.1",
+    "@covalent/core": "0.10.2",
+    "@covalent/data-table": "0.9.1",
+    "@covalent/file-upload": "0.9.1",
+    "@covalent/highlight": "0.10.2",
+    "@covalent/http": "0.10.2",
+    "@covalent/json-formatter": "0.9.1",
+    "@covalent/markdown": "0.10.2",
+    "@covalent/paging": "0.9.1",
+    "@covalent/search": "0.9.1",
+    "chart.js": "^2.4.0",
+    "ng2-charts": "^1.4.4",
+    "ts-helpers": "1.1.2"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "2.4.4",
+    "@types/hammerjs": "2.0.34",
+    "@types/jasmine": "2.5.41",
+    "@types/node": "7.0.0",
+    "@types/selenium-webdriver": "2.53.39",
+    "angular-cli": "1.0.0-beta.19-3",
+    "codelyzer": "2.0.0-beta.4",
+    "ember-cli-inject-live-reload": "1.4.1",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "3.2.0",
+    "karma": "1.4.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-cli": "1.0.1",
+    "karma-jasmine": "1.1.0",
+    "karma-remap-istanbul": "0.4.0",
+    "karma-firefox-launcher": "1.0.0",
+    "karma-phantomjs-launcher": "1.0.2",
+    "node-sass": "4.3.0",
+    "phantomjs-prebuilt": "2.1.14",
+    "protractor": "5.0.0",
+    "ts-node": "2.0.0",
+    "tslint": "4.3.1",
+    "typescript": "2.1.5"
+  },
+  "optionalDependencies": {
+    "@covalent/data": "0.5.1"
+  }
+}

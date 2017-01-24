@@ -1,0 +1,70 @@
+<td-layout-nav logo="assets/icons/teradata_logo_big.svg" flex>
+<span>111 </span>
+<span flex></span>
+  <div toolbar-content layout="row" layout-align="center right" flex>
+    <span>Customer Journey</span>
+    <span flex></span>
+    <!--<a md-icon-button buttonDisableFix md-tooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon>chrome_reader_mode</md-icon></a>
+    <a md-icon-button buttonDisableFix md-tooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><md-icon svgSrc="assets/icons/github.svg"></md-icon></a>-->
+  </div>
+  <td-layout-manage-list #list>
+    <!--<md-toolbar list-items >
+      <span>Product Name</span>
+    </md-toolbar>-->
+    <md-nav-list list-items>
+      <a md-list-item 
+        md-ripple class="block relative"
+        (click)="list.toggle()"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/main']">
+        <md-icon md-list-icon>dashboard</md-icon>
+        Customer Journey
+      </a>
+      <a md-list-item 
+        md-ripple class="block relative"
+        (click)="list.toggle()"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['stats']">
+        <md-icon md-list-icon>insert_chart</md-icon>
+        Attribution
+      </a>
+      <a md-list-item 
+        md-ripple class="block relative"
+        (click)="list.toggle()"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['features']">
+        <md-icon md-list-icon>star</md-icon>
+        Paths
+      </a>
+      <a md-list-item (click)="list.toggle()" md-ripple class="block relative">
+        <md-icon md-list-icon>people</md-icon>
+        Predicted Churn
+      </a>
+       <a md-list-item (click)="list.toggle()" md-ripple class="block relative">
+        <md-icon md-list-icon>receipt</md-icon>
+        Acquistion
+      </a>
+      <a md-list-item       
+       md-ripple class="block relative"
+       (click)="list.toggle()" 
+       [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['dashboard']">
+        <md-icon md-list-icon>settings</md-icon>
+        Customer Sentiment
+      </a>
+    </md-nav-list>
+   <!-- <div toolbar-buttons layout="row" layout-align="start center" flex>
+      <span>{{title}}</span>
+      <span flex></span>
+      <button md-button class="md-icon-button"><md-icon class="md-24">view_module</md-icon></button>
+      <button md-button class="md-icon-button"><md-icon class="md-24">sort</md-icon></button>
+      <button md-button class="md-icon-button"><md-icon class="md-24">settings</md-icon></button>
+      <button md-button class="md-icon-button"><md-icon class="md-24">more_vert</md-icon></button>
+    </div>-->
+    <router-outlet></router-outlet>
+  </td-layout-manage-list>
+</td-layout-nav>

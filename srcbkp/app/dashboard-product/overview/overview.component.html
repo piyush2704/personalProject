@@ -1,0 +1,466 @@
+<div class="md-content" class="inset">
+    
+        </div>
+       
+         <div layout="column" layout-gt-sm="row">
+        <div flex-gt-xs="40">
+            <md-card>
+            <md-card-title>Attribution</md-card-title>
+            <md-card-subtitle>Click to explore by segment</md-card-subtitle>
+            <md-divider></md-divider>
+           <!-- <md-list class="will-load user-list">
+                <template tdLoading="users.load">
+                <template let-user let-last="last" ngFor [ngForOf]="users">
+                    <md-list-item layout-align="row">
+                    <md-icon md-list-icon>account_box</md-icon>
+                    <h3 md-line> {{user.display_name}} </h3>
+                    <p md-line> {{user.id}} </p>
+                    </md-list-item>
+                    <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+                </template>
+            </md-list> -->
+                <div style="display: block">
+                <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+               
+              [chartType]="doughnutChartType"
+              
+              (chartHover)="chartHovered($event)"
+
+              (chartClick)="chartClicked($event)" class="donutClass"></canvas>
+</div>
+      <!--      <br><br><br><br><br><br><br><br><br>-->
+            <md-divider></md-divider>
+            <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+            </md-card>
+        </div>
+   
+      
+        <div flex-gt-xs="60">
+            <md-card>
+            <md-card-title>Here are a few insights we thought you might find useful</md-card-title>
+            
+            <md-divider></md-divider>
+           <!-- <md-list class="will-load user-list">
+                <template tdLoading="users.load">
+                <template let-user let-last="last" ngFor [ngForOf]="users">
+                    <md-list-item layout-align="row">
+                    <md-icon md-list-icon>account_box</md-icon>
+                    <h3 md-line> {{user.display_name}} </h3>
+                    <p md-line> {{user.id}} </p>
+                    </md-list-item>
+                    <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+                </template>
+            </md-list> -->
+            <br><br><br><br><br><br><br><br><br>
+            <md-divider></md-divider>
+            <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+            </md-card>
+        </div>
+         </div>
+    
+     <div layout="column" layout-gt-sm="row">
+        <div flex-gt-sm="100">
+            <md-card>
+          <md-card-title>Top 3 Customer Paths to Purchases</md-card-title>
+          <md-card-subtitle>Click on paths to view users sessions</md-card-subtitle>
+          <md-divider class="section-divider"></md-divider>
+            <div layout="row" class="purchase-path" layout-xs="column">
+                <div flex="9" [routerLink] = "['/users']">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_email</md-icon>
+                    <div layout="column">
+                      <span class="title">  Email </span>
+                    </div>
+                    
+                </div>
+                  <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <md-divider class="section-divider-1"></md-divider>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_tv</md-icon>
+                    <div layout="column">
+                       <span class="title "> Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <md-divider class="section-divider"></md-divider>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_group</md-icon>
+                    <div layout="column">
+                        <span class="title ">Social</span>
+                    </div>
+                </div>
+                 <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_group</md-icon>
+                    <div layout="column">
+                       <span class="title"> Social</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_stay_primary_portrait</md-icon>
+                    <div layout="column">
+                       <span class="title"> Mobile Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_tv</md-icon>
+                    <div layout="column">
+                       <span class="title"> Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_add_shopping_cart</md-icon>
+                    <div layout="column">
+                       <span class="title"> Cart</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -132px" class="icon custom-icon tc-grey-500">sd_local_atm</md-icon>
+                    <div layout="column">
+                      <span class="title">  Purchase</span>
+                    </div>
+                </div>
+            </div>
+            <div layout="row" class="sub-footer" layout-xs="column">
+                <div flex="15">
+                    <div layout="column"><b>$42.5M</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Total Revenue</span>
+                    </div>
+                </div>
+                <div flex="15">
+                    <div layout="column"><b class="sub-2">6 days</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Duration</span>
+                    </div>
+                </div>
+                <div flex="60"></div>
+            </div>
+            <md-divider class="section-divider"></md-divider>
+            <div layout="row" class="purchase-path" layout-xs="column">
+                <div flex="15">
+                    <md-icon style="margin-left: -146px" class="icon custom-icon tc-grey-500">sd_email</md-icon>
+                    <div layout="column">
+                      <span class="title">  Email</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style2">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="custom-icon icon tc-grey-500">sd_tv</md-icon>
+                    <div layout="column">
+                      <span class="title">  Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style2">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_store</md-icon>
+                    <div layout="column">
+                      <span class="title">  Store</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style2">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -132px" class="icon custom-icon tc-grey-500">sd_local_atm</md-icon>
+                    <div layout="column">
+                      <span class="title">  Purchase</span>
+                    </div>
+                </div>
+                
+                <div flex="9"></div>
+                <div flex="9"></div>
+                <div flex="9"></div>
+                <div flex="9"></div>
+            </div>
+            <div layout="row" class="sub-footer" layout-xs="column">
+                <div flex="15">
+                    <div layout="column"><b>$35.1M</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Total Revenue</span>
+                    </div>
+                </div>
+                <div flex="15">
+                    <div layout="column"><b>2 days</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Duration</span>
+                    </div>
+                </div>
+                <div flex="60"></div>
+            </div>
+            <md-divider class="section-divider"></md-divider>
+            <div layout="row" class="purchase-path" layout-xs="column">
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_search</md-icon>
+                    <div layout="column">
+                     <span class="title">   Search</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style3">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_tv</md-icon>
+                    <div layout="column">
+                     <span class="title">   Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style3">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_group</md-icon>
+                    <div layout="column">
+                     <span class="title">   Social</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style3">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -145px" class="icon custom-icon tc-grey-500">sd_group</md-icon>
+                    <div layout="column">
+                      <span class="title">  Social</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style3">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -150px" class="icon custom-icon tc-grey-500">sd_tv</md-icon>
+                    <div layout="column">
+                      <span class="title">  Web</span>
+                    </div>
+                </div>
+                <div id="u71" class="ax_default horizontal_line horizontal-line-style3">
+                    <img id="u71_img" class="img " src="assets/icons/u71.png">
+                    <!-- Unnamed () -->
+                    <div id="u72" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                    </div>
+                </div>
+                <div flex="9">
+                    <md-icon style="margin-left: -132px" class="icon custom-icon tc-grey-500">sd_local_atm</md-icon>
+                    <div layout="column">
+                      <span class="title">  Purchase</span>
+                    </div>
+                </div>
+                
+                <div flex="9"></div>
+                <div flex="9"></div>
+            </div>
+            <div layout="row" class="sub-footer" layout-xs="column">
+                <div flex="15">
+                    <div layout="column"><b>$15.3M</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Total Revenue</span>
+                    </div>
+                </div>
+                <div flex="15">
+                    <div layout="column"><b>4 days</b></div>
+                    <div layout="column">
+                        <span class="foo-sub-heading">Duration</span>
+                    </div>
+                </div>
+                
+                
+                <div flex="60"></div>
+            </div>
+            <md-divider class="section-divider"></md-divider>
+<!--
+          <md-nav-list class="will-load item-list">
+            <template tdLoading="items.load">
+              <template let-item let-last="last" ngFor [ngForOf]="items">
+                <a md-list-item layout-align="row" [routerLink]="['../item', item.item_id]">
+                  <md-icon md-list-avatar> {{item.icon}} </md-icon>
+                  <h3 md-line> {{item.name}} </h3>
+                  <p md-line> {{item.description | truncate:50 }} </p>
+                  <span flex></span>
+                  <span class="md-caption text-right" flex="15"> {{item.created | timeAgo }} </span>
+                </a>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </template>
+          </md-nav-list>
+-->
+ 
+            <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+        </md-card>
+      </div>
+     </div>
+    <div layout="column" layout-gt-xs="row">
+        <div flex-gt-xs="40">
+            <md-card>
+                <md-card-title>Predicted Customer Chrun</md-card-title>
+                <td-charts [margin]="{left:90}"
+                        [shadow]="true"
+                        fillOpacity="0.75">
+                    <td-axis-x [link]="chartArea1" [ticks]="true" [show]="true" [grid]="false"></td-axis-x>
+                    <td-axis-y-left [link]="chartArea1" [ticks]="true" [show]="true" [grid]="true"></td-axis-y-left>
+                    <td-chart-area #chartArea1 [colors]="['#FF6D00', '#E65100']"
+                        dataSrc="data/data.json"
+                        bottomAxis="x"
+                        columns="y"
+                        [transition]="true"
+                        transitionDuration="1000"
+                        transitionDelay="500">
+                    </td-chart-area>
+                </td-charts>
+                <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+            </md-card>
+        </div>
+        <div flex-gt-xs="40">
+            <md-card>
+                <md-card-title>Top Channels For Customer Aquistion</md-card-title>
+                <td-charts [shadow]="true"
+                        fillOpacity="0.95">
+                    <td-axis-x [link]="chartBar1" [ticks]="true" [show]="true" [grid]="false"></td-axis-x>
+                    <td-axis-y-right [link]="chartBar1" [show]="true" [grid]="true"></td-axis-y-right>
+                    <td-chart-bar #chartBar1 [colors]="['blue', 'deepOrange']"
+                        [data]="jsonData"
+                        [padding]="0.25"
+                        bottomAxis="x"
+                        columns="y"
+                        [transition]="true"
+                        transitionDuration="1000"
+                        transitionDelay="500">
+                    </td-chart-bar>
+                </td-charts>
+                <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" style="text-align-last: right" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+            </md-card>
+        </div>
+</div>
+ <div layout="column" layout-gt-xs="row">
+  <div flex-gt-xs="100">
+            <md-card>
+                <md-card-title>Customer Sentiment</md-card-title>
+              <td-charts [margin]="{top: 60, bottom: 50}"
+                          chartHeight="325"
+                          [shadow]="true">
+                  <td-axis-x [link]="chartLine1" [ticks]="true" [show]="true" [grid]="false" legend=""></td-axis-x>
+                  <td-axis-y-left [link]="chartLine1" [ticks]="true" [show]="true" [grid]="true" legend="Sales($)"></td-axis-y-left>
+                  <td-chart-line #chartLine1
+                          dataSrc="data/datatime.csv"
+                          timeSeries="true"
+                          bottomAxis="date"
+                          [columns]="['close']"
+                          [titles]="['close']"
+                          [colors]="['#FF6D00']"
+                          [transition]="true"
+                          transitionDuration="900"
+                          transitionDelay="500">
+                  </td-chart-line>
+                </td-charts>
+                <md-card-actions>
+                <a md-button buttonDisableFix color="accent" class="text-upper" style="text-align-last: right" [routerLink]="['/users']">
+                <span>View More</span>
+                </a>
+            </md-card-actions>
+            </md-card>
+        </div>
+ </div>
+<a md-fab buttonDisableFix color="accent" class="md-fab-position-bottom-right" [routerLink]="['/form']"> 
+    <md-icon>add</md-icon>
+</a>
+<br><br>

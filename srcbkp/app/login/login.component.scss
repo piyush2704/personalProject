@@ -1,0 +1,29 @@
+:host /deep/ {
+    .md-input-prefix {
+        width: 44px;
+        text-align: center;
+        
+    }
+    md-divider {
+        display: block;
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding-top: 10px;
+    }
+    
+
+        md-card-actions .md-accent {
+                
+                margin: 10px;
+        }
+         
+        md-input, md-textarea{
+
+            padding-bottom: 15px;
+        }
+
+       body md-card {
+           
+       }
+}
+
